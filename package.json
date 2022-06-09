@@ -3,5 +3,8 @@
   "version": "1.0.0",
   "description": "nodejs course",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "nodemon": "^2.0.16"
+  }
 }
