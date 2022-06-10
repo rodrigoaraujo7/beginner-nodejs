@@ -20,31 +20,31 @@ fs.writeFile(
     }
 
     console.log("File created successfully!");
-  }
-);
 
-// Add content to a file - adding content to an existing file without deleting the old content!
-fs.appendFile(
-  path.join(__dirname, "/test", "app.txt"),
-  "hello world!",
-  (error) => {
-    if (error) {
-      return console.log("Error:", error);
-    }
+    // Add content to a file - adding content to an existing file without deleting the old content!
+    fs.appendFile(
+      path.join(__dirname, "/test", "app.txt"),
+      "hello world!",
+      (error) => {
+        if (error) {
+          return console.log("Error:", error);
+        }
 
-    console.log("Content added successfully!");
-  }
-);
+        console.log("Content added successfully!");
+      }
+    );
 
-// Read file
-fs.readFile(
-  path.join(__dirname, "/test", "app.txt"),
-  "utf-8",
-  (error, data) => {
-    if (error) {
-      return console.log("Error:", error);
-    }
+    // Read file
+    fs.readFile(
+      path.join(__dirname, "/test", "app.txt"),
+      "utf-8",
+      (error, data) => {
+        if (error) {
+          return console.log("Error:", error);
+        }
 
-    console.log(data);
+        console.log(data);
+      }
+    );
   }
 );
