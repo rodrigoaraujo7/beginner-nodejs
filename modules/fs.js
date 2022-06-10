@@ -23,7 +23,7 @@ fs.writeFile(
   }
 );
 
-// Add content to a file - adding content to a existing file without deleting the old content!
+// Add content to a file - adding content to an existing file without deleting the old content!
 fs.appendFile(
   path.join(__dirname, "/test", "app.txt"),
   "hello world!",
@@ -33,5 +33,18 @@ fs.appendFile(
     }
 
     console.log("Content added successfully!");
+  }
+);
+
+// Read file
+fs.readFile(
+  path.join(__dirname, "/test", "app.txt"),
+  "utf-8",
+  (error, data) => {
+    if (error) {
+      return console.log("Error:", error);
+    }
+
+    console.log(data);
   }
 );
